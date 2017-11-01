@@ -22,6 +22,20 @@
                     ]
                 }
             }],
+            ['OS=="linux" and target_arch=="aarch64"', {
+                'link_settings': {
+                    'ldflags': [
+                        '-Wl,--no-as-needed',
+                    ],
+                    'libraries!': [
+                        '-lcblas',
+                    ],
+                    'libraries': [
+                        '-lopenblas',
+                        '<(module_root_dir)/lib/aarch64-ubuntu1604/libsnowboy-detect.a',
+                    ]
+                }
+            }],
             ['OS=="linux" and target_arch=="arm"', {
                 'link_settings': {
                     'ldflags': [

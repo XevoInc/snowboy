@@ -17,7 +17,11 @@
                     'ldflags': [
                         '-Wl,--no-as-needed',
                     ],
+                    'libraries!': [
+                        '-lcblas',
+                    ],
                     'libraries': [
+                        '-lopenblas',
                         '<(module_root_dir)/lib/ubuntu64/libsnowboy-detect.a',
                     ]
                 }
@@ -64,7 +68,7 @@
             "<!(pwd)/include"
         ],
         'libraries': [
-            '-lcblas'
+            '-lopenblas'
         ],
         'xcode_settings': {
             'MACOSX_DEPLOYMENT_TARGET': '10.11',

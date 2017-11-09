@@ -21,8 +21,8 @@
                         '-lcblas',
                     ],
                     'libraries': [
-                        '-lopenblas',
                         '<(module_root_dir)/lib/ubuntu64/libsnowboy-detect.a',
+                        '-lopenblas',
                     ]
                 }
             }],
@@ -35,8 +35,8 @@
                         '-lcblas',
                     ],
                     'libraries': [
-                        '-lopenblas',
                         '<(module_root_dir)/lib/aarch64-ubuntu1604/libsnowboy-detect.a',
+                        '-lopenblas',
                     ]
                 }
             }],

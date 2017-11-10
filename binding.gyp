@@ -36,6 +36,7 @@
                     ],
                     'libraries': [
                         '<(module_root_dir)/lib/aarch64-ubuntu1604/libsnowboy-detect.a',
+                        '-Wl,--no-as-needed',
                         '-lopenblas',
                     ]
                 }

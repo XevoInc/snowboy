@@ -15,7 +15,7 @@
     "preinstall": "npm install node-pre-gyp",
     "install": "node-pre-gyp install --fallback-to-build",
     "test": "node index.js",
-    "prepublish": "tsc --listFiles"
+    "prepare": "tsc --listFiles"
   },
   "author": "KITT.AI <snowboy@kitt.ai>",
   "contributors": [

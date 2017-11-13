@@ -9,6 +9,7 @@
                 'link_settings': {
                     'libraries': [
                         '<(module_root_dir)/lib/osx/libsnowboy-detect.a',
+                        '<!@(pkg-config openblas --libs)',
                     ]
                 }
             }],
@@ -16,9 +17,6 @@
                 'link_settings': {
                     'ldflags': [
                         '-Wl,--no-as-needed',
-                    ],
-                    'libraries!': [
-                        '-lcblas',
                     ],
                     'libraries': [
                         '<(module_root_dir)/lib/ubuntu64/libsnowboy-detect.a',
@@ -30,9 +28,6 @@
                 'link_settings': {
                     'ldflags': [
                         '-Wl,--no-as-needed',
-                    ],
-                    'libraries!': [
-                        '-lcblas',
                     ],
                     'libraries': [
                         '<(module_root_dir)/lib/aarch64-ubuntu1604/libsnowboy-detect.a',
@@ -67,9 +62,6 @@
         'include_dirs': [
             "<!(node -e \"require('nan')\")",
             "<!(pwd)/include"
-        ],
-        'libraries': [
-            '-lopenblas'
         ],
         'xcode_settings': {
             'MACOSX_DEPLOYMENT_TARGET': '10.11',

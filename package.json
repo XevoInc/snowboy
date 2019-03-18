@@ -12,7 +12,8 @@
     "host": "https://snowboy-release-node.s3-us-west-2.amazonaws.com"
   },
   "scripts": {
-    "install": "node-pre-gyp install --fallback-to-build",
+    "install_org": "node-pre-gyp install --fallback-to-build",
+    "install": "node-gyp install",
     "test": "node index.js",
     "prepare": "tsc --listFiles"
   },

@@ -8,14 +8,14 @@
     "module_name": "snowboy",
     "module_path": "./lib/node/binding/{configuration}/{node_abi}-{platform}-{arch}/",
     "remote_path": "./{module_name}/v{version}/{configuration}/",
-    "package_name": "{module_name}-v{version}-{node_abi}-{platform}-{arch}.tar.gz",
+    "package_name": "FORCE_REBUILD_ME_{module_name}-v{version}-{node_abi}-{platform}-{arch}.tar.gz",
     "host": "https://snowboy-release-node.s3-us-west-2.amazonaws.com"
   },
   "scripts": {
-    "install_org": "node-pre-gyp install --fallback-to-build",
-    "install": "node-gyp install",
+    "install": "node-pre-gyp install --fallback-to-build",
     "test": "node index.js",
-    "prepare": "tsc --listFiles"
+    "prepare": "tsc --listFiles",
+    "prepublish": "tsc --listFiles"
   },
   "author": "KITT.AI <snowboy@kitt.ai>",
   "contributors": [
